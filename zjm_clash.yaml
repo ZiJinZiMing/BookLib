@@ -1,7 +1,7 @@
 #
 #-------------------------------------------------------------#
 #  创建者：https://v2rayse.com
-#  创建时间：2023-10-06 13:04:24
+#  创建时间：2023-10-06 14:37:27
 #  模版：v2rayse默认模版
 #  节点数量：1
 #-------------------------------------------------------------#
@@ -13,7 +13,7 @@ mode: Rule
 log-level: info
 external-controller: 0.0.0.0:9090
 proxies:
-  - {"type":"vless","name":"Vless+reality|YqSl.love@xray.com","server":"www.zhangjinming.skin","port":59627,"uuid":"d3235b1d-5dca-49ac-9e19-bfe5f0a65b8e","skip-cert-verify":true,"network":"tcp","flow":"xtls-rprx-vision","servername":"www.microsoft.com","tls":false,"udp":true}
+  - {"type":"vless","name":"Vless+reality|YqSl.love@xray.com","server":"www.zhangjinming.skin","port":59627,"uuid":"d3235b1d-5dca-49ac-9e19-bfe5f0a65b8e","skip-cert-verify":true,"udp":true,"network":"grpc","tls":true,"servername":"www.microsoft.com"}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
