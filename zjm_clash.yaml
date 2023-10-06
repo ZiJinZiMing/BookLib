@@ -1,9 +1,9 @@
 #
 #-------------------------------------------------------------#
 #  创建者：https://v2rayse.com
-#  创建时间：2023-10-06 14:37:27
+#  创建时间：2023-10-07 16:55:29
 #  模版：v2rayse默认模版
-#  节点数量：1
+#  节点数量：2
 #-------------------------------------------------------------#
 #
 port: 7890
@@ -13,46 +13,53 @@ mode: Rule
 log-level: info
 external-controller: 0.0.0.0:9090
 proxies:
-  - {"type":"vless","name":"Vless+reality|YqSl.love@xray.com","server":"www.zhangjinming.skin","port":59627,"uuid":"d3235b1d-5dca-49ac-9e19-bfe5f0a65b8e","skip-cert-verify":true,"udp":true,"network":"grpc","tls":true,"servername":"www.microsoft.com"}
+  - {"type":"vmess","name":"vmess_RackNerd|GMX9.love@xray.com","server":"aaa.zhangjinming.skin","port":51052,"uuid":"1723ac01-1b6b-4a9f-a903-099c7df51646","alterId":0,"cipher":"auto","network":"tcp","tls":true}
+  - {"type":"vmess","name":"vmess_bandwagon|9W9d.love@xray.com","server":"www.zhangjinming.skin","port":44308,"uuid":"9540f202-cd53-45b4-e152-f1bd497df1f7","alterId":0,"cipher":"auto","network":"tcp","tls":true}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - Vless+reality|YqSl.love@xray.com
+      - vmess_RackNerd|GMX9.love@xray.com
+      - vmess_bandwagon|9W9d.love@xray.com
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - Vless+reality|YqSl.love@xray.com
+      - vmess_RackNerd|GMX9.love@xray.com
+      - vmess_bandwagon|9W9d.love@xray.com
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - Vless+reality|YqSl.love@xray.com
+      - vmess_RackNerd|GMX9.love@xray.com
+      - vmess_bandwagon|9W9d.love@xray.com
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - Vless+reality|YqSl.love@xray.com
+      - vmess_RackNerd|GMX9.love@xray.com
+      - vmess_bandwagon|9W9d.love@xray.com
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - Vless+reality|YqSl.love@xray.com
+      - vmess_RackNerd|GMX9.love@xray.com
+      - vmess_bandwagon|9W9d.love@xray.com
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - Vless+reality|YqSl.love@xray.com
+      - vmess_RackNerd|GMX9.love@xray.com
+      - vmess_bandwagon|9W9d.love@xray.com
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -75,7 +82,8 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - Vless+reality|YqSl.love@xray.com
+      - vmess_RackNerd|GMX9.love@xray.com
+      - vmess_bandwagon|9W9d.love@xray.com
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
