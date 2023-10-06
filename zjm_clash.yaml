@@ -1,9 +1,9 @@
 #
 #-------------------------------------------------------------#
 #  创建者：https://v2rayse.com
-#  创建时间：2023-09-19 18:09:22
+#  创建时间：2023-10-06 13:04:24
 #  模版：v2rayse默认模版
-#  节点数量：2
+#  节点数量：1
 #-------------------------------------------------------------#
 #
 port: 7890
@@ -13,53 +13,46 @@ mode: Rule
 log-level: info
 external-controller: 0.0.0.0:9090
 proxies:
-  - {"type":"vmess","name":"SanJose|tN4K.love@xray.com","ws-opts":{"path":"/"},"server":"aaa.zhangjinming.skin","port":49165,"uuid":"3a8aed2a-de19-4396-d9ad-ea82556b84a7","alterId":0,"cipher":"auto","network":"ws","tls":true}
-  - {"type":"vmess","name":"vmess|87cb.love@xray.com","server":"www.zhangjinming.skin","port":52146,"uuid":"388893f1-2a43-4b92-f9e7-0d1a5a3fad7c","alterId":0,"cipher":"auto","network":"tcp","tls":true}
+  - {"type":"vless","name":"Vless+reality|YqSl.love@xray.com","server":"www.zhangjinming.skin","port":59627,"uuid":"d3235b1d-5dca-49ac-9e19-bfe5f0a65b8e","skip-cert-verify":true,"network":"tcp","flow":"xtls-rprx-vision","servername":"www.microsoft.com","tls":false,"udp":true}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - SanJose|tN4K.love@xray.com
-      - vmess|87cb.love@xray.com
+      - Vless+reality|YqSl.love@xray.com
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - SanJose|tN4K.love@xray.com
-      - vmess|87cb.love@xray.com
+      - Vless+reality|YqSl.love@xray.com
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - SanJose|tN4K.love@xray.com
-      - vmess|87cb.love@xray.com
+      - Vless+reality|YqSl.love@xray.com
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - SanJose|tN4K.love@xray.com
-      - vmess|87cb.love@xray.com
+      - Vless+reality|YqSl.love@xray.com
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - SanJose|tN4K.love@xray.com
-      - vmess|87cb.love@xray.com
+      - Vless+reality|YqSl.love@xray.com
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - SanJose|tN4K.love@xray.com
-      - vmess|87cb.love@xray.com
+      - Vless+reality|YqSl.love@xray.com
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -82,8 +75,7 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - SanJose|tN4K.love@xray.com
-      - vmess|87cb.love@xray.com
+      - Vless+reality|YqSl.love@xray.com
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
